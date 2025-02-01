@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:swipe/services/connectivity_service.dart';
+import 'package:swipe/theme/app_theme.dart';
 
 import 'providers/product_provider.dart';
 import 'screens/product_screen.dart';
@@ -28,20 +29,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Product App',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          scaffoldBackgroundColor: Colors.white,
-          appBarTheme: AppBarTheme(
-            elevation: 0,
-            backgroundColor: Colors.white,
-            iconTheme: IconThemeData(color: Colors.black),
-            titleTextStyle: TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
+        theme: AppTheme.lightTheme,
         home: ProductListScreen(),
       ),
     );
